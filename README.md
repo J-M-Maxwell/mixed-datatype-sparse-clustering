@@ -9,10 +9,10 @@ k-means clustering algorithm defined in this paper https://www.ncbi.nlm.nih.gov/
 ### Main Function: 
 
     Arguements:
-    X -> The original data matrix, conintuous data must numeric
-    distance_type -> The type of distance formula used. Currently supports gower, wishart, and podani distances
-    k -> number of desired clusters
-    s -> L1 norm upper bound of the feature weights (s >= ||w|| > 1.0) if s = None then performs tuning step first
+    X -> The original data matrix
+    distance_type -> The type of distance formula used. Currently supports gower, wishart, podani, and huang distances
+    k -> number of clusters
+    s -> L1 norm upper bound of the feature weights (s >= ||w|| > 1.0)
     max_attempts -> The maximum number of attempts between clustering and feature selection
     method -> The method used in sklearn_extra.cluster.KMedoids for clustering ('pam' or 'alternate')
     init -> How the medoids are initialized in in sklearn_extra.cluster.KMedoids
@@ -56,6 +56,10 @@ k-means clustering algorithm defined in this paper https://www.ncbi.nlm.nih.gov/
 #### 5) distfuncs.wishart_distance
 
     Calculates the NxNxP wishart distance matrix
+    
+#### 6) distfuncs.huang_distance
+
+    Calculates the NxNxP huang distance matrix
 
 #### 6) subfuncs.kmedoid_clusters
 
